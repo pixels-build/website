@@ -8,3 +8,10 @@
   src: url(/fonts/KarmaticArcade.ttf) format("truetype");
   font-display: swap;
 }
+
+@font-face {
+  font-family: Silkscreen;
+  font-weight: 400;
+  src: url(/fonts/Silkscreen.ttf) format("truetype");
+  font-display: swap;
+}

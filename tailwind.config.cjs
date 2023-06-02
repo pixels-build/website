@@ -1,14 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
       "karmatic-arcade": ["Karmatic Arcade"],
-      silkscreen: ["var(--font-silkscreen)"],
+      silkscreen: ["Silkscreen"],
     },
     colors: {
       white: "white",
