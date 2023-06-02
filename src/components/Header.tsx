@@ -25,7 +25,7 @@ export default function Header() {
             </A>
             <div class="flex gap-2 items-center">
               <img src="/pixel.svg" class="w-5 h-5" />
-              <p class="text-xl font-silkscreen -mt-0.5">$0.056</p>
+              <p class="text-xl font-silkscreen -mt-0.5 text-grey">$0.056</p>
             </div>
           </div>
           <div class="flex gap-8">
