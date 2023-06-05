@@ -1,5 +1,5 @@
 import { connect } from "@wagmi/core";
-import Button from "./Button";
+import NewButton from "./Button";
 import { WalletConnectConnector } from "@wagmi/core/connectors/walletConnect";
 import { Show, createSignal } from "solid-js";
 
@@ -9,8 +9,7 @@ export { connected, setConnected };
 
 export default function ConnectButton() {
   return (
-    <Button
-      color="black"
+    <NewButton
       onClick={async () => {
         const { account } = await connect({
           connector: new WalletConnectConnector({
@@ -22,13 +21,14 @@ export default function ConnectButton() {
 
         if (account) setConnected(true);
       }}
+      class="bg-black"
     >
       <Show when={connected()} fallback={"Connect"}>
         <div class="flex gap-2 items-center">
           <img src="/connected.svg" class="w-3 h-3" />
-          <span class="leading-none pb-0.5">Connected</span>
+          <p class="-mt-0.5">Connected</p>
         </div>
       </Show>
-    </Button>
+    </NewButton>
   );
 }

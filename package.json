@@ -20,6 +20,7 @@
     "@wagmi/core": "^1.0.8",
     "solid-js": "^1.7.2",
     "solid-start": "^0.2.26",
+    "tailwind-merge": "^1.13.0",
     "undici": "^5.15.1"
   },
   "engines": {

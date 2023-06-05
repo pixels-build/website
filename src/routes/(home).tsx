@@ -16,11 +16,11 @@ export default function Home() {
           </A>
           Pixels
         </h1>
-        <p class="font-silkscreen text-2xl text-grey">
+        <p class="text-2xl text-grey">
           Bringing liquidity and fractionalization to NounsDAO
         </p>
-        <Button color="#2B83F6" href="/market">
-          Trade Your Nouns
+        <Button href="/trade" hover="scale">
+          Start Trading
         </Button>
       </div>
     </div>

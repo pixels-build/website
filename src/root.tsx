@@ -34,8 +34,8 @@ export const metadata = {
 
 export const navigation = [
   {
-    name: "Market",
-    url: "/market",
+    name: "Trade",
+    url: "/trade",
   },
   { name: "Proposals", url: "/proposals" },
   { name: "Create", url: "/create" },
@@ -69,19 +69,7 @@ export default function Root() {
   });
 
   onMount(async () => {
-    const account = getAccount();
-
-    if (!account.isConnected) {
-      const { account } = await connect({
-        connector: new WalletConnectConnector({
-          options: {
-            projectId: "9e080c458781a9a2d4c42149c5f02972",
-          },
-        }),
-      });
-
-      if (account) setConnected(true);
-    }
+    setConnected(getAccount().isConnected);
   });
 
   return (
@@ -95,9 +83,8 @@ export default function Root() {
       <Body
         style={{
           "background-position": backgroundPosition(),
-          // "background-image": location.pathname === "/" ? "url(/tile.svg)" : "",
         }}
-        class="flex flex-col bg-[url(/tile.svg)] [background-size:50px]"
+        class="flex flex-col font-silkscreen leading-none bg-[url(/tile.svg)] [background-size:50px]"
       >
         <Suspense>
           <ErrorBoundary>

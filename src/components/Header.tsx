@@ -11,7 +11,7 @@ export default function Header() {
     <>
       <Banner />
       <header class="sticky top-0 w-full z-20">
-        <div class="absolute top-0 w-full flex items-center justify-between p-8 ">
+        <div class="absolute top-0 w-full flex items-center justify-between p-8">
           <div class="flex gap-8">
             <A
               href="/"
@@ -24,11 +24,12 @@ export default function Header() {
               />
             </A>
             <div class="flex gap-2 items-center">
-              <img src="/pixel.svg" class="w-5 h-5" />
-              <p class="text-xl font-silkscreen -mt-0.5 text-grey">$0.056</p>
+              <p class="text-xl -mt-0.5">
+                $0.056 <span class="text-[#20BD43]">+10%</span>
+              </p>
             </div>
           </div>
-          <div class="flex gap-8">
+          <div class="flex items-center gap-8">
             <nav class="flex gap-6">
               {navigation.map((item) => (
                 <A
@@ -36,7 +37,7 @@ export default function Header() {
                   style={{
                     color: location.pathname === item.url ? "black" : "",
                   }}
-                  class="font-silkscreen text-xl text-grey hover:text-black transition-colors duration-200 ease-in-out"
+                  class="text-xl text-grey hover:text-black transition-colors duration-200 ease-in-out"
                 >
                   {item.name}
                 </A>

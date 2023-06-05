@@ -12,6 +12,10 @@ module.exports = {
       transparent: "transparent",
       blue: "#2B83F6",
       grey: "#A4A4A4",
+      lightgrey: "#DDDDDD",
+    },
+    transitionDuration: {
+      DEFAULT: "250ms",
     },
   },
   plugins: [],
